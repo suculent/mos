@@ -430,7 +430,7 @@ func (f *Fuse) String() string {
 		case 0:
 			fmt.Fprintf(b, fmt.Sprintf(" 0x%%0%dx", vflen), v)
 			if f.Name() == MACAddressFuseName {
-				fmt.Fprintf(b, fmt.Sprintf(" (MAC: %s)", f.MACAddressString()))
+				fmt.Fprintf(b, " (MAC: %s)", f.MACAddressString())
 			}
 			if vd.Cmp(v) != 0 {
 				fmt.Fprintf(b, fmt.Sprintf(" -> 0x%%0%dx", vflen), vd)

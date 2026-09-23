@@ -143,7 +143,7 @@ func usage() {
 
 	fmt.Fprintf(w, "\nGlobal Flags:\n")
 	if *helpFull {
-		fmt.Fprintf(w, flag.CommandLine.FlagUsages())
+		fmt.Fprint(w, flag.CommandLine.FlagUsages())
 	} else {
 		printFlag(w, "Optional", "verbose")
 		printFlag(w, "Optional", "logtostderr")

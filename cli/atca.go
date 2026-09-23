@@ -335,7 +335,7 @@ func atcaSetKey(ctx context.Context, dc dev.DevConn) error {
 	}
 
 	if err != nil {
-		return errors.Annotatef(err, fn)
+		return errors.Annotatef(err, "%s", fn)
 	}
 
 	keyData, _ := base64.StdEncoding.DecodeString(req.Key)
